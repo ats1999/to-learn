@@ -87,3 +87,36 @@ sudo systemctl disable nginx
 sudo systemctl enable nginx
 ```
 
+## Editing default HTML page
+The default HTML page will looks like this.
+![Screenshot from 2022-03-18 11-10-00](https://user-images.githubusercontent.com/54087826/158944166-e1d0c409-f287-4651-835d-a60b1b2f0b22.png)
+
+In order edit the default html content, you can use `vim/nano` to edit the content.
+
+```js
+// use vim command to edit the content
+sudo vim index.nginx-debian.html
+```
+
+Or, you can get `index.nginx-debian.html` to your current working directory. 
+
+```js
+cp /var/www/html/index.nginx-debian.html .
+```
+
+Now, edit the `index.nginx-debian.html` content and save it.
+
+Once, you edited the html content, you can save it back to where it was. 
+
+```js
+sudo cp index.nginx-debian.html /var/www/html
+```
+
+Then reload nginx server.
+```js
+sudo systemctl reload nginx
+```
+
+Now, you can see the newer content.
+
+

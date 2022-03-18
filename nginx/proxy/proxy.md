@@ -13,3 +13,14 @@ Make changes into the configuration and update
 sudo cp default /etc/nginx/sites-enabled/
 sudo systemctl reload nginx
 ```
+
+## Multiple proxy
+```js
+location /users/ {
+    proxy_pass http://localhost:4001/;
+}
+
+location /products/ {
+    proxy_pass http://localhost:4000/;
+}
+```

@@ -119,4 +119,9 @@ sudo systemctl reload nginx
 
 Now, you can see the newer content.
 
+## Add another HTML file
+```js
+sudo cp test.html /var/www/html
+```
 
+Then open - http://localhost/test.html

@@ -2,6 +2,11 @@ const express = require("express");
 const app = express();
 const PORT = 4000;
 
+app.use((req,res,next)=>{
+    console.log(req.originalUrl);
+    next()
+})
+
 app.get("/", (req, res) => {
   let html = `
         <html>
